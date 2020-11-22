@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fannylikescoffee</title>
+    <title>FANNY LIKES COFFEE</title>
+    <!-- Stylesheet -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Karma:300,400|Lora:400,400i&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+
+    <!-- Favicon -->
+    <%= favicon_link_tag asset_path('Favicon.png') %>
+    <%= favicon_link_tag asset_path('granos-de-cafe.png') %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
+      <div class="header">
+        <h1><%= link_to "FANNY LIKES COFFEE", root_path %></h1>
+        <h2>among other things...</h2>
+      </div>
+
+      <div class="navbar">
+        <ul>
+          <% Category.all.each do |category| %>
+          <li><%= link_to category.category_name, category_path(category) %></li>
+          <% end %>
+          <li><%#= link_to "About me", about_path %></li>
+        </ul>
+      </div>
+
     <%= yield %>
+
+      <div class="footer">
+        <div class="footer-copyright">
+          <p>Copyright FannyLikesCoffee© 2019 | All Rights Reserved. </p>
+          <span>This website is made with <i class="fas fa-heart"></i> in sunny Madrid.</span>
+        </div>
+      </div>
   </body>
 </html>
