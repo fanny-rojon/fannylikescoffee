@@ -1,12 +1,25 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar .active {
+  color: #fe504f;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar ul {
+  padding-left: 0;
+  text-align: center;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar li {
+  font-family: 'Karma', serif;
+  font-size: 16px;
+  font-weight: lighter;
+  display: inline-block;
+  padding: 20px 15px;
+}
+
+.navbar a {
+  color: #272B2F;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #6e2142;
 }
