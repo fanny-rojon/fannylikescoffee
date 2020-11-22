@@ -12,16 +12,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-// Your CSS partials
-@import "pages/index";
-
 /*Imports*/
 @import "components/index";
-@import "components/header";
-@import "components/navbar";
-@import "components/cards";
-@import "components/footer";
-@import "components/article";
 
 /*Fonts
 font-family: 'Cinzel', serif;
