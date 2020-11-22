@@ -1,0 +1,62 @@
+
+.article-header {
+  text-align: center;
+}
+
+.article-header h1 {
+  margin: 15px 0 0 0;
+  font-family: 'Lora', serif;
+  font-size: 25px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #2C2C2C;
+}
+
+.article-category {
+  font-family: 'Lora', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #7E7E7E;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.article-date {
+  font-family: 'Lora', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #7E7E7E;
+  font-weight: 700;
+}
+
+.article-body {
+  margin-bottom: 40px;
+}
+
+.article-body p {
+  font-family: 'Lora', sans-serif;
+  font-size: 16px;
+  color: #45454d;
+  line-height: 26px;
+}
+
+.article-body a {
+  color: #ff4893;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.left {
+  text-align: left;
+}
+
+ul {
+  font-family: 'Lora', sans-serif;
+  font-size: 16px;
+  color: #45454d;
+  line-height: 26px;
+}
+
+.recipe {
+  padding: 0 100px;
+}
