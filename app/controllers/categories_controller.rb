@@ -6,4 +6,13 @@ class CategoriesController < ApplicationController
     @category = Category.find(params["id"].to_i)
     @posts = @category.posts.reverse
   end
+
+  def new
+    @category = Category.new
+  end
+
+  def create
+    @category = Category.new(category_params)
+    @category.save
+  end
 end
