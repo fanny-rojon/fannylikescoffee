@@ -10,8 +10,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new
-    if @post.save(post_params)
+    @post = Post.new(post_params)
+    if @post.save
       flash[:notice] = "Post created!"
       redirect_to post_path(@post)
     else
@@ -52,6 +52,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :photo)
   end
 end
