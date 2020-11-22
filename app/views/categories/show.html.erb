@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="cards">
+    <% @posts.each do |post|  %>
+      <div class="card">
+        <div class="featured-image">
+          <%= link_to image_tag(post.media), post_path(post) %>
+        </div>
+        <div class="overlay">
+          <span class="category-title">
+            <%= link_to post.category.category_name, category_path(post.category) %>
+          </span>
+          <h2 class="entry-title">
+            <%= link_to post.title, post_path(post) %>
+          </h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
